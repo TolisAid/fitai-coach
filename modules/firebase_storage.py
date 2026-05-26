@@ -73,3 +73,4 @@ def clear_user_history(user_id):
 
     for doc in progress:
         doc.reference.delete()
+
