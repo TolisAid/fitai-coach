@@ -25,7 +25,7 @@ from modules.firebase_storage import (
     get_user_progress,
     clear_user_history,
     delete_plan,
-    delete_progress
+    delete_progress,
 )
 
 from modules.health_metrics import (
