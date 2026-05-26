@@ -1,0 +1,9 @@
+streamlit
+langchain
+langchain-openai
+openai
+python-dotenv
+pandas
+firebase-admin
+streamlit-cookies-manager
+reportlab

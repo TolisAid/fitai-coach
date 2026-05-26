@@ -1,0 +1,493 @@
+/* =========================
+   GLOBAL
+========================= */
+
+.stApp {
+    background: radial-gradient(circle at top left, #111827 0%, #020617 55%, #000000 100%);
+    color: #f8fafc;
+}
+
+.block-container {
+    padding-top: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    max-width: 1500px;
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+section[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #020617 0%, #0f172a 100%);
+    border-right: 1px solid rgba(148, 163, 184, 0.18);
+}
+
+section[data-testid="stSidebar"] h2 {
+    color: #ffffff;
+    font-size: 28px;
+}
+
+section[data-testid="stSidebar"] p,
+section[data-testid="stSidebar"] span {
+    color: #cbd5e1;
+}
+
+
+/* Sidebar radio σαν κουμπιά */
+div[role="radiogroup"] label {
+    background: rgba(15, 23, 42, 0.95);
+    border: 1px solid rgba(148, 163, 184, 0.15);
+    border-radius: 14px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+    transition: 0.25s ease;
+}
+
+div[role="radiogroup"] label:hover {
+    background: linear-gradient(90deg, #7c3aed, #2563eb);
+    border-color: rgba(168, 85, 247, 0.8);
+    transform: translateX(4px);
+}
+
+
+/* =========================
+   TITLES
+========================= */
+
+h1 {
+    font-size: 44px !important;
+    font-weight: 800 !important;
+}
+
+h2 {
+    font-size: 30px !important;
+    font-weight: 800 !important;
+}
+
+h3 {
+    font-size: 22px !important;
+    font-weight: 700 !important;
+}
+
+
+/* =========================
+   DASHBOARD METRIC CARDS
+========================= */
+
+div[data-testid="stMetric"] {
+    background: linear-gradient(145deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.95));
+    border: 1px solid rgba(168, 85, 247, 0.35);
+    border-radius: 22px;
+    padding: 24px;
+    box-shadow: 0 0 35px rgba(124, 58, 237, 0.15);
+    min-height: 120px;
+}
+
+div[data-testid="stMetricLabel"] {
+    color: #cbd5e1;
+    font-weight: 600;
+}
+
+div[data-testid="stMetricValue"] {
+    color: #ffffff;
+    font-size: 34px;
+    font-weight: 800;
+}
+
+
+/* =========================
+   CUSTOM CARDS
+========================= */
+
+.custom-card {
+    background: linear-gradient(145deg, rgba(30, 41, 59, 0.88), rgba(15, 23, 42, 0.95));
+    border: 1px solid rgba(168, 85, 247, 0.35);
+    border-radius: 24px;
+    padding: 28px;
+    box-shadow: 0 0 35px rgba(124, 58, 237, 0.13);
+    margin-bottom: 22px;
+}
+
+.custom-card h3 {
+    margin-top: 0;
+    color: #ffffff;
+}
+
+.custom-card p {
+    color: #cbd5e1;
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+input,
+textarea,
+div[data-baseweb="select"] > div {
+    background-color: rgba(15, 23, 42, 0.95) !important;
+    border: none !important;
+
+input:focus,
+textarea:focus {
+    border-color: #a855f7 !important;
+    box-shadow: 0 0 0 1px #a855f7 !important;
+}
+
+label {
+    color: #e5e7eb !important;
+    font-weight: 600 !important;
+}
+
+
+/* Number input fix */
+div[data-testid="stNumberInput"] {
+    width: 100%;
+}
+
+div[data-testid="stNumberInput"] input {
+    width: 100%;
+}
+
+
+/* =========================
+   SLIDER
+========================= */
+
+.stSlider [data-baseweb="slider"] {
+    padding-top: 12px;
+}
+
+.stSlider div[role="slider"] {
+    background-color: #a855f7 !important;
+    border-color: #a855f7 !important;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.stButton button {
+    width: 100%;
+    border-radius: 16px;
+    background: linear-gradient(90deg, #7c3aed, #d946ef);
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    font-weight: 800;
+    font-size: 16px;
+    box-shadow: 0 0 25px rgba(168, 85, 247, 0.35);
+    transition: 0.25s ease;
+}
+
+.stButton button:hover {
+    background: linear-gradient(90deg, #8b5cf6, #ec4899);
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   EXPANDERS / ALERTS
+========================= */
+
+.streamlit-expanderHeader {
+    background: rgba(15, 23, 42, 0.9);
+    border-radius: 14px;
+    border: 1px solid rgba(148, 163, 184, 0.16);
+}
+
+.stAlert {
+    border-radius: 16px;
+}
+
+
+/* =========================
+   CHARTS
+========================= */
+
+div[data-testid="stVegaLiteChart"] {
+    background: rgba(15, 23, 42, 0.75);
+    border-radius: 22px;
+    padding: 20px;
+    border: 1px solid rgba(168, 85, 247, 0.25);
+}}
+/* =========================
+   SECTION TITLES
+========================= */
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    background: linear-gradient(
+        90deg,
+        rgba(124, 58, 237, 0.22),
+        rgba(37, 99, 235, 0.12)
+    );
+
+    border: 1px solid rgba(168, 85, 247, 0.25);
+
+    padding: 16px 22px;
+
+    border-radius: 18px;
+
+    margin-top: 18px;
+    margin-bottom: 18px;
+
+    box-shadow: 0 0 18px rgba(168, 85, 247, 0.08);
+}
+
+.section-title h3 {
+    margin: 0;
+    color: white;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.section-icon {
+    font-size: 28px;
+}
+/* =========================
+   FORM CARDS
+========================= */
+
+.form-card {
+    background: linear-gradient(
+        145deg,
+        rgba(15, 23, 42, 0.92),
+        rgba(30, 41, 59, 0.82)
+    );
+
+    border: 1px solid rgba(168, 85, 247, 0.22);
+    border-radius: 24px;
+
+    padding: 24px;
+    margin-bottom: 24px;
+
+    box-shadow:
+        0 0 25px rgba(168, 85, 247, 0.08),
+        inset 0 0 20px rgba(255, 255, 255, 0.02);
+}
+/* =========================
+   PREMIUM DASHBOARD CARDS
+========================= */
+
+div[data-testid="stMetric"] {
+    position: relative;
+    overflow: hidden;
+
+    background: linear-gradient(
+        145deg,
+        rgba(30, 41, 59, 0.95),
+        rgba(15, 23, 42, 0.98)
+    );
+
+    border: 1px solid rgba(168, 85, 247, 0.35);
+    border-radius: 24px;
+
+    padding: 26px;
+
+    box-shadow:
+        0 0 30px rgba(124, 58, 237, 0.18),
+        inset 0 0 25px rgba(255, 255, 255, 0.02);
+
+    transition: 0.25s ease;
+}
+
+div[data-testid="stMetric"]:hover {
+    transform: translateY(-4px);
+    border-color: rgba(216, 180, 254, 0.75);
+    box-shadow:
+        0 0 40px rgba(168, 85, 247, 0.35),
+        inset 0 0 25px rgba(255, 255, 255, 0.03);
+}
+
+div[data-testid="stMetric"]::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    right: -40px;
+
+    width: 110px;
+    height: 110px;
+
+    background: radial-gradient(
+        circle,
+        rgba(168, 85, 247, 0.35),
+        transparent 70%
+    );
+
+    border-radius: 50%;
+}
+
+div[data-testid="stMetricLabel"] {
+    color: #cbd5e1;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+div[data-testid="stMetricValue"] {
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 900;
+}
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero-section {
+    position: relative;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(124, 58, 237, 0.22),
+            rgba(37, 99, 235, 0.12)
+        );
+
+    border: 1px solid rgba(168, 85, 247, 0.25);
+
+    border-radius: 30px;
+
+    padding: 42px;
+
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 0 40px rgba(124, 58, 237, 0.12);
+}
+
+.hero-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -80px;
+    right: -80px;
+
+    width: 220px;
+    height: 220px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(168, 85, 247, 0.35),
+            transparent 70%
+        );
+
+    border-radius: 50%;
+}
+
+.hero-title {
+    font-size: 54px;
+    font-weight: 900;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    color: #cbd5e1;
+    margin-bottom: 20px;
+}
+
+.hero-badges {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.hero-badge {
+    background: rgba(15, 23, 42, 0.85);
+
+    border: 1px solid rgba(168, 85, 247, 0.25);
+
+    padding: 10px 16px;
+
+    border-radius: 999px;
+
+    color: white;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* =========================
+   SIDEBAR BUTTONS
+========================= */
+
+section[data-testid="stSidebar"] .stRadio > div {
+    gap: 12px;
+}
+
+section[data-testid="stSidebar"] label[data-baseweb="radio"] {
+    background: rgba(20, 30, 55, 0.95);
+    border: 1px solid rgba(168, 85, 247, 0.25);
+    border-radius: 14px;
+    padding: 14px 18px;
+    width: 100%;
+    min-height: 58px;
+
+    display: flex;
+    align-items: center;
+
+    transition: 0.25s ease;
+}
+
+section[data-testid="stSidebar"] label[data-baseweb="radio"]:hover {
+    border-color: #a855f7;
+    background: rgba(35, 45, 75, 1);
+    transform: translateX(4px);
+}
+
+section[data-testid="stSidebar"] label[data-baseweb="radio"] div {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+
+.profile-card {
+    background: linear-gradient(135deg,#182848,#4b6cb7);
+    padding: 20px;
+    border-radius: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.35);
+}
+
+.profile-avatar {
+    font-size: 54px;
+    margin-bottom: 10px;
+}
+
+.profile-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 6px;
+}
+
+.profile-role {
+    font-size: 13px;
+    color: #9ca3af;
+    margin-bottom: 12px;
+}
+
+.profile-online {
+    display: inline-block;
+    background: #052e16;
+    color: #4ade80;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+}
