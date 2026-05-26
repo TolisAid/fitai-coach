@@ -12,15 +12,19 @@ from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 
 from io import BytesIO
+import os
 
 # =========================
 # REGISTER FONT
 # =========================
 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+FONT_PATH = os.path.join(BASE_DIR, "assets", "fonts", "arial.ttf")
+
 pdfmetrics.registerFont(
     TTFont(
         "Arial",
-        "assets/fonts/arial.ttf"
+        FONT_PATH
     )
 )
 
