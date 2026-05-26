@@ -327,42 +327,6 @@ else:
                     else:
                         st.error(result["error"])
 
-            
-            
-
-        if st.button("Εγγραφή"):
-
-            if username.strip() == "":
-                st.error("Πρέπει να συμπληρώσεις όνομα χρήστη.")
-
-            elif "@" not in new_email or "." not in new_email:
-                    st.error("Πρέπει να βάλεις έγκυρο email.")
-
-            elif len(new_password) < 6:
-                    st.error("Ο κωδικός πρέπει να έχει τουλάχιστον 6 χαρακτήρες.")
-
-            else:
-                result = register_user(
-                    new_email,
-                    new_password,
-                    username
-                )
-
-                if result["success"]:
-                    st.success("Ο λογαριασμός δημιουργήθηκε! Τώρα κάνε σύνδεση.")
-                else:
-                    st.error(result["error"])
-
-                if result["success"]:
-                    st.success(
-                        "Ο λογαριασμός δημιουργήθηκε! Τώρα κάνε σύνδεση."
-                        )
-                else:
-                    st.error(result["error"])
-
-        login_dialog()
-
-
 page = st.sidebar.radio(
     "Πλοήγηση",
     [
