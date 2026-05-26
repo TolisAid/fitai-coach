@@ -809,7 +809,7 @@ elif page == "📜 Ιστορικό":
                         key=f"pdf_initial_{item.get('created_at', item.get('id', ''))}"
                     )
 
-                    if st.session_state.logged_in:
+                if st.session_state.logged_in:
 
                     if st.button(
                         "🗑️ Διαγραφή αυτού του προγράμματος",
@@ -857,7 +857,7 @@ elif page == "📜 Ιστορικό":
                         key=f"pdf_progress_{item.get('created_at', item.get('id', ''))}"
                     )
 
-                    if st.session_state.logged_in:
+                if st.session_state.logged_in:
 
                     if st.button(
                         "🗑️ Διαγραφή αυτού του update",
