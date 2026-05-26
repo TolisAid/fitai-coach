@@ -23,9 +23,7 @@ from modules.firebase_storage import (
     save_progress,
     get_user_plans,
     get_user_progress,
-    clear_user_history,
-    delete_plan,
-    delete_progress,
+    clear_user_history
 )
 
 from modules.health_metrics import (
@@ -809,22 +807,6 @@ elif page == "📜 Ιστορικό":
                         key=f"pdf_initial_{item.get('created_at', item.get('id', ''))}"
                     )
 
-                if st.session_state.logged_in:
-
-                    if st.button(
-                        "🗑️ Διαγραφή αυτού του προγράμματος",
-                        key=f"delete_plan_{item.get('id')}"
-                    ):
-
-                        delete_plan(
-                            st.session_state.user_id,
-                            item.get("id")
-                        )
-
-                        st.success("Το πρόγραμμα διαγράφηκε.")
-
-                        st.rerun()
-
             elif item.get("type") == "progress_update":
 
                 with st.expander(
@@ -856,22 +838,6 @@ elif page == "📜 Ιστορικό":
                         mime="application/pdf",
                         key=f"pdf_progress_{item.get('created_at', item.get('id', ''))}"
                     )
-
-                if st.session_state.logged_in:
-
-                    if st.button(
-                        "🗑️ Διαγραφή αυτού του update",
-                        key=f"delete_progress_{item.get('id')}"
-                    ):
-
-                        delete_progress(
-                            st.session_state.user_id,
-                            item.get("id")
-                        )
-
-                        st.success("Το update διαγράφηκε.")
-
-                        st.rerun()
 
 
 # =========================
